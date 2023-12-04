@@ -1,29 +1,10 @@
-<!-- 1. Refactor The Real Time Bus Tracker
-It’s time to experiment with the project and make it your own by refactoring the code. You might consider:
-
-Using data from another public API
-Adapting the styling
-2. Share Your Real Time Bus Tracker Repository
-After you’ve made these improvements, share the link to your GitHub repository in the discussion board below. To align with your GitHub Portfolio Project, it should include at least three files: index.html, mapanimation.js, and styles.css. It should also include a README file with:
-
-Title of the project: Real Time Bus Tracker
-Description of the project: What does the current project do?  Include improvements you made in the description. 
-How to Run: This is information someone would use to run your project on their machine.
-Roadmap of future improvements: What additional features or functionality would be helpful to a user? 
-License information: This should include information about the MIT license. 
-3. Respond To The Following In A Discussion Post:
-What improvements did you make when refactoring the project?
-Why did you choose to make these changes?
-What did you find challenging about the refactoring process?
-Share a screenshot of your map.  -->
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Real Time Bus Tracker</title>
-    <script> //copied from Google Maps API
+    <script>
       (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-        key: "AIzaSyDuvtuEVLSZu_7S17WwXiYC-S_DEcxv2So",
+        key: "YOUR_API_KEY_HERE",
         v: "weekly",
         // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
         // Add other bootstrap parameters as needed, using camel case.

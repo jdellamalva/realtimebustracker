@@ -1,3 +1,4 @@
+const dataAPIKey = 'YOUR_API_KEY_HERE'
 const sf = {lat: 37.7577607, lng: -122.4787993};
 let map;
 const interval = 90000;
@@ -12,13 +13,8 @@ async function initMap() {
   });
 }
 
-// Real-time Vehicle Monitoring API provides information about current location and expected activities of a vehicle in XML and JSON formats.
-
-// Endpoint: http://api.511.org/transit/VehicleMonitoring?api_key=[your_key]&agency=[operatorID]
-// Allowable parameters: api_key (mandatory), agency (mandatory), vehicleID (optional) and format (optional)
-
 async function fetchBusData(){
-  const apiKey = '84564c16-b5ca-472c-94a0-3330564a49d7';
+  const apiKey = dataAPIKey;
   const agency = 'SF';
   const url = `http://api.511.org/transit/VehicleMonitoring?api_key=${apiKey}&agency=${agency}`
 
@@ -58,6 +54,13 @@ function updateMarkers(vehicleLocations){
       position: location,
       map: map, // 'map' is your Google Map object
       title: `Vehicle Location`, // Optional: You can set the title of the marker
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 3,
+        fillColor: "#0000FF",
+        fillOpacity: 1.0,
+        strokeWeight: 0.25
+      }
     });
 
     markers.push(marker)
